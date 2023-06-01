@@ -32,14 +32,33 @@ public class Bus {
 	}
 
 	public Bus(String patente, String marca, String modelo) {
-		throw new UnsupportedOperationException();
+		this.patente=patente;
+		this.marca=marca;
+		this.modelo=modelo;
 	}
 
 	public void asociarViaje(Viaje viaje) {
-		throw new UnsupportedOperationException();
+		this.viaje.add(viaje);
+		viaje.setBus(this);
 	}
 
-	public void asociarConductor(Conductor conductor) {
-		throw new UnsupportedOperationException();
+	public void setConductor(Conductor conductor) {
+		this.conductor = conductor;
+	}
+
+	public Conductor getConductor() {
+		return conductor;
+	}
+
+	public ArrayList<Viaje> getViaje() {
+		return viaje;
+	}
+
+	public void setViaje(ArrayList<Viaje> viaje) {
+		this.viaje = viaje;
+	}
+
+	public String toString() {
+		return "";
 	}
 }

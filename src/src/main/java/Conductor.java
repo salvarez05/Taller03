@@ -3,7 +3,7 @@ public class Conductor {
 	private String apellido;
 	private int numeroContacto;
 	private Tipo tipoLicencia;
-	public enum tipo;
+	public enum Tipo{A1,A2,A3,A4,A5}
 	private Bus bus;
 
 	public String getNombre() {
@@ -39,6 +39,21 @@ public class Conductor {
 	}
 
 	public Conductor(String nombre, String apellido, int numeroContacto, Tipo tipoLicencia) {
-		throw new UnsupportedOperationException();
+		this.nombre=nombre;
+		this.apellido=apellido;
+		this.numeroContacto=numeroContacto;
+		this.tipoLicencia=tipoLicencia;
+	}
+
+	public void setBus(Bus bus) {
+		this.bus = bus;
+	}
+
+	public Bus getBus() {
+		return bus;
+	}
+
+	public String toString() {
+		return "";
 	}
 }

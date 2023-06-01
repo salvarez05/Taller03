@@ -1,10 +1,12 @@
+import java.util.ArrayList;
+
 public class Viaje {
 	private String ciudadOrigen;
 	private String ciudadDestino;
 	private int cantidadPasajero;
 	private String horaSalida;
 	private String horaLlegada;
-	private ArrayList<String> pasajeros;
+	private ArrayList<String> pasajeros= new ArrayList<>();
 	private Bus bus;
 
 	public String getCiudadOrigen() {
@@ -47,15 +49,29 @@ public class Viaje {
 		this.horaLlegada = horaLlegada;
 	}
 
-	public Viaje(String ciudadOrigen, String ciudadDestino, int cantidadPasajero, String horaSalida, String horaLlegada) {
-		throw new UnsupportedOperationException();
+	public Viaje(String ciudadOrigen, String ciudadDestino, String horaSalida, String horaLlegada) {
+		this.ciudadOrigen=ciudadOrigen;
+		this.ciudadDestino=ciudadDestino;
+		this.horaLlegada=horaLlegada;
+		this.horaSalida=horaSalida;
 	}
 
 	public ArrayList<String> getPasajeros() {
-		throw new UnsupportedOperationException();
+		return pasajeros;
 	}
 
 	public void setPasajeros(ArrayList<String> pasajeros) {
-		throw new UnsupportedOperationException();
+		this.pasajeros=pasajeros;
+	}
+
+	public void setBus(Bus bus) {
+		this.bus = bus;
+	}
+
+	public Bus getBus() {
+		return bus;
+	}
+	public String toString() {
+		return "";
 	}
 }
